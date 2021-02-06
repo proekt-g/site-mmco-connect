@@ -1,0 +1,23 @@
+$default-font: "Object Sans";
+$content-width: 1180px;
+$heightHeader: 80px;
+$mainColor: #fff;
+$mainWeight: 400;
+$mainSize: 20px;
+:root {
+  --black: #0c0c0d;
+  --black-card-bg: #1d1e1f;
+  --black-footer: #050505;
+  --black-statistics-line: #313234;
+
+  --white-opacity-8: rgba(255, 255, 255, 0.08);
+  --white-opacity-10: rgba(255, 255, 255, 0.1);
+  --white-opacity-15: rgba(255, 255, 255, 0.15);
+  --white-opacity-20: rgba(255, 255, 255, 0.2);
+  --white-opacity-25: rgba(255, 255, 255, 0.25);
+  --white-opacity-30: rgba(255, 255, 255, 0.3);
+  --white-opacity-40: rgba(255, 255, 255, 0.4);
+  --white-opacity-60: rgba(255, 255, 255, 0.6);
+
+  --aqua: #00f7a5;
+}

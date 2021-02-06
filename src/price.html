@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.min.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <aside class="modal-overlay">
+      <div class="modal modal--callback">
+        <button class="modal__close">
+          <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <path d="M1 1l10 10-10 10M21 21l-10-10 10-10" stroke="#fff" stroke-width="2" />
+          </svg>
+        </button>
+        <form class="modal__content" method="post" id="form-callback">
+          <p class="modal-title">Оставьте заявку</p>
+          <p class="modal__content-subtitle">Мы свяжемся с вами в течение дня</p>
+          <p class="modal__content-text">Как к вам обращаться ?</p>
+          <input class="modal__content-input" type="text" placeholder="Ваше имя" required />
+          <p class="modal__content-text">Телефон</p>
+          <input class="modal__content-input help__form-input--phone" type="text" placeholder="+7 (900) - 000 - 00 - 00" required />
+          <button class="modal__content-submit">оставить заявку</button>
+        </form>
+      </div>
+    </aside>
+    <header class="header">
+      <div class="container">
+        <svg class="header__logo" width="189" height="50" viewBox="0 0 189 50" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <path
+            d="M11.821 5.103c-1.263-3.086-4.272-5.103-7.615-5.103h-2.522v21.707h5.914v-14.125l5.841 14.125h4.83l5.841-14.125v14.125h5.914v-21.707h-2.577c-3.348 0-6.361 2.024-7.62 5.117l-3.989 9.8-4.016-9.815zM44.672 5.103c-1.263-3.086-4.272-5.103-7.614-5.103h-2.522v21.707h5.914v-14.125l5.841 14.125h4.831l5.841-14.125v14.125h5.914v-21.707h-2.577c-3.348 0-6.361 2.024-7.62 5.117l-3.989 9.8-4.016-9.815zM30.451 40.889l-5.652-.753c-.962 3.701-5.72 4.814-9.054 4.814-4.871 0-9.701-1.711-9.701-7.36 0-5.522 4.733-7.328 9.701-7.328 3.377 0 8.135 1.105 9.012 4.905l5.692-.61c-1.015-6.861-8.766-9.378-14.803-9.378-7.897 0-15.647 3.469-15.647 12.411s7.75 12.411 15.647 12.411c5.991 0 13.731-2.291 14.804-9.111z"
+            fill="#fff"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M48.893 50c7.847 0 16.107-3.379 16.107-12.411 0-9.033-8.26-12.411-16.121-12.411-7.847 0-16.093 3.396-16.093 12.411s8.26 12.411 16.107 12.411zm0-5.051c-4.964 0-10.062-1.517-10.062-7.36s5.133-7.328 10.062-7.328c4.929 0 10.062 1.691 10.062 7.328 0 5.637-5.097 7.36-10.062 7.36z"
+            fill="#fff"
+          />
+          <rect x="80" y="7" width="109" height="36" rx="18" fill="#fff" />
+          <path
+            d="M95.36 30h2.26v-4.54h.2l3.92 4.54h2.88l-4.74-5.28 4.64-4.88h-2.86l-3.84 4.16h-.2v-4.16h-2.26v10.16zm15.06.36c3.26 0 5.54-2.2 5.54-5.44 0-3.22-2.28-5.46-5.54-5.46-3.28 0-5.54 2.24-5.54 5.46 0 3.24 2.28 5.44 5.54 5.44zm0-1.98c-1.9 0-3.28-1.44-3.28-3.46 0-2 1.38-3.48 3.28-3.48s3.28 1.48 3.28 3.48c0 2.02-1.38 3.46-3.28 3.46zm7.733 1.62h2.28v-4.16h5.06v4.16h2.26v-10.16h-2.26v4.06h-5.06v-4.06h-2.28v10.16zm12.285 0h2.28v-4.16h5.06v4.16h2.26v-10.16h-2.26v4.06h-5.06v-4.06h-2.28v10.16zm17.365.36c2.34 0 4.22-1.04 4.96-2.8l-1.88-.72c-.56 1.04-1.7 1.68-3 1.68-1.76 0-3.02-1.14-3.28-2.9h8.5c.02-.16.04-.42.04-.8 0-3.14-2.26-5.36-5.4-5.36-3.18 0-5.48 2.22-5.48 5.34 0 3.22 2.32 5.56 5.54 5.56zm-3.2-6.42c.3-1.6 1.46-2.64 3.06-2.64 1.62 0 2.88 1.06 3.12 2.64h-6.18zm10.757 6.06h2.26v-4.54h.2l3.92 4.54h2.88l-4.74-5.28 4.64-4.88h-2.86l-3.84 4.16h-.2v-4.16h-2.26v10.16zm13.244 0h2.26v-8.22h3.52v-1.94h-9.32v1.94h3.54v8.22z"
+            fill="#0C0C0D"
+          />
+        </svg>
+        <nav class="menu">
+          <aside class="menu__burger">
+            <span class="menu__burger-dot menu__burger-dot--first"></span>
+            <span class="menu__burger-line menu__burger-line--first"></span>
+            <span class="menu__burger-line menu__burger-line--second"></span>
+            <span class="menu__burger-line menu__burger-line--third"></span>
+            <span class="menu__burger-dot menu__burger-dot--second"></span>
+          </aside>
+          <div class="menu__desktop">
+            <a class="menu__desktop-element" href="#">
+              <span class="menu__desktop-element-text">как работаем</span>
+              <i class="big-arrow">
+                <svg class="big-arrow__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path d="M1.5 18.5l17-17m0 0h-15.5m15.5 0v15.5" stroke="#fff" stroke-width="3" />
+                </svg>
+              </i>
+            </a>
+            <a class="menu__desktop-element" href="#">
+              <span class="menu__desktop-element-text">форматы</span>
+              <i class="big-arrow">
+                <svg class="big-arrow__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path d="M1.5 18.5l17-17m0 0h-15.5m15.5 0v15.5" stroke="#fff" stroke-width="3" />
+                </svg>
+              </i>
+            </a>
+            <a class="menu__desktop-element" href="#">
+              <span class="menu__desktop-element-text">кейсы</span>
+              <i class="big-arrow">
+                <svg class="big-arrow__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path d="M1.5 18.5l17-17m0 0h-15.5m15.5 0v15.5" stroke="#fff" stroke-width="3" />
+                </svg>
+              </i>
+            </a>
+            <a class="menu__desktop-element" href="#">
+              <span class="menu__desktop-element-text">отзывы</span>
+              <i class="big-arrow">
+                <svg class="big-arrow__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path d="M1.5 18.5l17-17m0 0h-15.5m15.5 0v15.5" stroke="#fff" stroke-width="3" />
+                </svg>
+              </i>
+            </a>
+            <a class="menu__desktop-element" href="#">
+              <span class="menu__desktop-element-text">цены</span>
+              <i class="big-arrow">
+                <svg class="big-arrow__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path d="M1.5 18.5l17-17m0 0h-15.5m15.5 0v15.5" stroke="#fff" stroke-width="3" />
+                </svg>
+              </i>
+            </a>
+          </div>
+        </nav>
+        <a class="header__all" href="#">обратная связь</a>
+      </div>
+    </header>
+    <main class="page-price main">
+      <section class="head">
+        <div class="container">
+          <div class="crumbs">
+            <a class="crumb" href="#">Главная</a>
+            <div class="crumb">Цены</div>
+          </div>
+          <div class="head__inner">
+            <div class="head__title">Цены</div>
+            <a class="head__link" href="#">
+              Подать заявку
+              <svg class="head__link-icon" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" fill="none">
+                <path d="M4.219 13.781l9.562-9.562m0 0h-8.719m8.719 0v8.719" stroke="#fff" stroke-width="2" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="content">
+        <div class="container">
+          <div class="content__title">Конференция <span class="content__title-span">— 1 день</span></div>
+          <div class="content__block">
+            <div class="content__box content__box--green">
+              <a class="content__box-link" href="#"></a>
+              <div class="content__box-text">Универсальный персонализированный шаблон *</div>
+              <div class="content__box-footer">от 150 000 ₽</div>
+            </div>
+            <div class="content__box content__box--blue">
+              <a class="content__box-link" href="#"></a>
+              <div class="content__box-text">Кастомизированное решение *</div>
+              <div class="content__box-footer">от 250 000 ₽</div>
+            </div>
+            <div class="content__text">* Стоимость трансляции рассчитывается отдельно</div>
+          </div>
+        </div>
+      </section>
+      <section class="content m140">
+        <div class="container">
+          <div class="content__title">Конференция <span class="content__title-span">— 20 экспонентов</span></div>
+          <div class="content__block">
+            <div class="content__box content__box--green">
+              <a class="content__box-link" href="#"></a>
+              <svg class="content__box-icon" width="274" height="204" viewBox="0 0 274 204" xmlns="http://www.w3.org/2000/svg" fill="none">
+                <rect x="21.648" y="67.04" width="78.571" height="50" rx="10" transform="rotate(-8.889 21.648 67.04)" fill="#fff" fill-opacity=".7" />
+                <rect
+                  x="30.919"
+                  y="126.32"
+                  width="78.571"
+                  height="50"
+                  rx="10"
+                  transform="rotate(-8.889 30.919 126.32)"
+                  fill="#fff"
+                  fill-opacity=".7"
+                />
+                <rect
+                  x="109.155"
+                  y="53.353"
+                  width="78.571"
+                  height="50"
+                  rx="10"
+                  transform="rotate(-8.889 109.155 53.353)"
+                  fill="#fff"
+                  fill-opacity=".7"
+                />
+                <rect
+                  x="118.427"
+                  y="112.633"
+                  width="78.571"
+                  height="50"
+                  rx="10"
+                  transform="rotate(-8.889 118.427 112.633)"
+                  fill="#fff"
+                  fill-opacity=".7"
+                />
+                <rect
+                  x="196.664"
+                  y="39.666"
+                  width="78.571"
+                  height="50"
+                  rx="10"
+                  transform="rotate(-8.889 196.664 39.666)"
+                  fill="#fff"
+                  fill-opacity=".7"
+                />
+                <rect
+                  x="205.936"
+                  y="98.946"
+                  width="78.571"
+                  height="50"
+                  rx="10"
+                  transform="rotate(-8.889 205.936 98.946)"
+                  fill="#fff"
+                  fill-opacity=".7"
+                />
+                <rect x=".571" y="45.539" width="291" height="159" rx="14.5" transform="rotate(-8.889 .571 45.539)" stroke="#fff" />
+              </svg>
+              <div class="content__box-text">Плиточная навигация</div>
+              <div class="content__box-footer">90 000 ₽</div>
+            </div>
+            <div class="content__box content__box--blue">
+              <a class="content__box-link" href="#"></a>
+              <svg class="content__box-icon" width="167" height="207" viewBox="0 0 167 207" xmlns="http://www.w3.org/2000/svg" fill="none">
+                <path d="M89.497 69.163l29.537 17.041-29.537 17.041-29.537-17.041 29.537-17.041z" stroke="#fff" stroke-miterlimit="10" />
+                <path d="M89.497 103.244l-29.537-17.041v34.081l29.537 17.041v-34.081z" fill="#fff" stroke="#fff" stroke-miterlimit="10" />
+                <path
+                  d="M59.962 86.203l-29.537-17.041v34.081l29.537 17.04v-34.081zM89.497 137.325l-29.537-17.04v34.081l29.537 17.041v-34.082zM59.962 120.284l-29.537-17.04v34.081l29.537 17.041v-34.082zM59.962 52.122l29.537 17.041-29.537 17.041-29.537-17.041 29.537-17.041zM119.032 52.122l29.537 17.041-29.537 17.041-29.537-17.041 29.537-17.041zM89.497 35.081l29.537 17.041-29.537 17.041-29.537-17.041 29.537-17.041zM89.495 103.244l29.537-17.041v34.081l-29.537 17.041v-34.081zM119.039 86.203l29.537-17.041v34.081l-29.537 17.04v-34.081zM89.495 137.325l29.537-17.04v34.081l-29.537 17.041v-34.082z"
+                  stroke="#fff"
+                  stroke-miterlimit="10"
+                />
+                <path d="M119.039 120.284l29.537-17.04v34.081l-29.537 17.041v-34.082z" fill="#fff" stroke="#fff" stroke-miterlimit="10" />
+                <path
+                  d="M89.497 171.406l-29.537-17.04v34.081l29.537 17.041v-34.082zM59.962 154.366l-29.537-17.041v34.081l29.537 17.041v-34.081zM89.495 171.406l29.537-17.04v34.081l-29.537 17.041v-34.082zM119.039 154.366l29.537-17.041v34.081l-29.537 17.041v-34.081zM148.576 35.081l29.424 17.041-29.424 17.041-29.537-17.041 29.537-17.041zM119.032 18.041l29.537 17.041-29.537 17.041-29.537-17.041 29.537-17.041zM30.424 69.163l-29.424-17.041v34.081l29.424 17.041v-34.081zM30.424 103.244l-29.424-17.041v34.081l29.424 17.041v-34.081zM30.424 35.081l29.537 17.041-29.537 17.041-29.424-17.041 29.424-17.041z"
+                  stroke="#fff"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M59.962 18.041l29.537 17.041-29.537 17.041-29.537-17.041 29.537-17.041zM30.424 137.325l-29.424-17.04v34.081l29.424 17.041v-34.082z"
+                  fill="#fff"
+                  stroke="#fff"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M89.497 1l29.537 17.041-29.537 17.041-29.537-17.041 29.537-17.041zM148.574 69.163l29.424-17.041v34.081l-29.424 17.041v-34.081zM148.574 103.244l29.424-17.041v34.081l-29.424 17.041v-34.081zM148.574 137.325l29.424-17.04v34.081l-29.424 17.041v-34.082z"
+                  stroke="#fff"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+              <div class="content__box-text">2,5D навигация</div>
+              <div class="content__box-footer">200 000 ₽</div>
+            </div>
+            <div class="content__box content__box--red">
+              <a class="content__box-link" href="#"></a>
+              <img class="content__box-icon" src="assets/images/content-box.jpg" alt="" />
+              <div class="content__box-text">3D навигация</div>
+              <div class="content__box-footer">400 000 ₽</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="help m140">
+        <div class="container container--flex">
+          <div class="help__texts">
+            <div class="help__title">Разработка нестандартных решений</div>
+            <div class="help__text">Оставите заявку и мы подберем индивидуальное решение для вас</div>
+          </div>
+          <form class="help__form" method="post" id="form-help">
+            <div class="help__form-title">Как к вам обращаться ?</div>
+            <input class="help__form-input" type="text" placeholder="Ваше имя" required />
+            <div class="help__form-title">Телефон</div>
+            <input class="help__form-input help__form-input--phone" type="text" placeholder="+7 (900) - 000 - 00 - 00" required />
+            <button class="help__form-submit">оставить заявку</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__question">
+          <img class="footer__question-picture" src="assets/images/footer.jpg" alt="" />
+          <div class="footer__question-title">Остались вопросы?</div>
+          <button class="footer__question-button callback-button">задать вопрос</button>
+        </div>
+        <div class="footer__cops">
+          <div class="footer__text">© 2020-2021, ММСО.Онлайн</div>
+          <div class="footer__text">online@mmco-expo.ru</div>
+          <a class="footer__text" href="#">Политика конфиденциольности</a>
+          <div class="footer__text footer__text--design">Задизайнено с любовью в ❤️ MateÇa</div>
+        </div>
+      </div>
+      <div class="footer__design">Задизайнено с любовью в ❤️ MateÇa</div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/main.min.js"></script>
+  </body>
+</html>

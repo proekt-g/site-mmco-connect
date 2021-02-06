@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.min.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <aside class="modal-overlay">
+      <div class="modal modal--callback">
+        <button class="modal__close">
+          <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <path d="M1 1l10 10-10 10M21 21l-10-10 10-10" stroke="#fff" stroke-width="2" />
+          </svg>
+        </button>
+        <form class="modal__content" method="post" id="form-callback">
+          <p class="modal-title">Оставьте заявку</p>
+          <p class="modal__content-subtitle">Мы свяжемся с вами в течение дня</p>
+          <p class="modal__content-text">Как к вам обращаться ?</p>
+          <input class="modal__content-input" type="text" placeholder="Ваше имя" required />
+          <p class="modal__content-text">Телефон</p>
+          <input class="modal__content-input help__form-input--phone" type="text" placeholder="+7 (900) - 000 - 00 - 00" required />
+          <button class="modal__content-submit">оставить заявку</button>
+        </form>
+      </div>
+    </aside>
+    <header class="header">
+      <div class="container">
+        <svg class="header__logo" width="189" height="50" viewBox="0 0 189 50" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <path
+            d="M11.821 5.103c-1.263-3.086-4.272-5.103-7.615-5.103h-2.522v21.707h5.914v-14.125l5.841 14.125h4.83l5.841-14.125v14.125h5.914v-21.707h-2.577c-3.348 0-6.361 2.024-7.62 5.117l-3.989 9.8-4.016-9.815zM44.672 5.103c-1.263-3.086-4.272-5.103-7.614-5.103h-2.522v21.707h5.914v-14.125l5.841 14.125h4.831l5.841-14.125v14.125h5.914v-21.707h-2.577c-3.348 0-6.361 2.024-7.62 5.117l-3.989 9.8-4.016-9.815zM30.451 40.889l-5.652-.753c-.962 3.701-5.72 4.814-9.054 4.814-4.871 0-9.701-1.711-9.701-7.36 0-5.522 4.733-7.328 9.701-7.328 3.377 0 8.135 1.105 9.012 4.905l5.692-.61c-1.015-6.861-8.766-9.378-14.803-9.378-7.897 0-15.647 3.469-15.647 12.411s7.75 12.411 15.647 12.411c5.991 0 13.731-2.291 14.804-9.111z"
+            fill="#fff"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M48.893 50c7.847 0 16.107-3.379 16.107-12.411 0-9.033-8.26-12.411-16.121-12.411-7.847 0-16.093 3.396-16.093 12.411s8.26 12.411 16.107 12.411zm0-5.051c-4.964 0-10.062-1.517-10.062-7.36s5.133-7.328 10.062-7.328c4.929 0 10.062 1.691 10.062 7.328 0 5.637-5.097 7.36-10.062 7.36z"
+            fill="#fff"
+          />
+          <rect x="80" y="7" width="109" height="36" rx="18" fill="#fff" />
+          <path
+            d="M95.36 30h2.26v-4.54h.2l3.92 4.54h2.88l-4.74-5.28 4.64-4.88h-2.86l-3.84 4.16h-.2v-4.16h-2.26v10.16zm15.06.36c3.26 0 5.54-2.2 5.54-5.44 0-3.22-2.28-5.46-5.54-5.46-3.28 0-5.54 2.24-5.54 5.46 0 3.24 2.28 5.44 5.54 5.44zm0-1.98c-1.9 0-3.28-1.44-3.28-3.46 0-2 1.38-3.48 3.28-3.48s3.28 1.48 3.28 3.48c0 2.02-1.38 3.46-3.28 3.46zm7.733 1.62h2.28v-4.16h5.06v4.16h2.26v-10.16h-2.26v4.06h-5.06v-4.06h-2.28v10.16zm12.285 0h2.28v-4.16h5.06v4.16h2.26v-10.16h-2.26v4.06h-5.06v-4.06h-2.28v10.16zm17.365.36c2.34 0 4.22-1.04 4.96-2.8l-1.88-.72c-.56 1.04-1.7 1.68-3 1.68-1.76 0-3.02-1.14-3.28-2.9h8.5c.02-.16.04-.42.04-.8 0-3.14-2.26-5.36-5.4-5.36-3.18 0-5.48 2.22-5.48 5.34 0 3.22 2.32 5.56 5.54 5.56zm-3.2-6.42c.3-1.6 1.46-2.64 3.06-2.64 1.62 0 2.88 1.06 3.12 2.64h-6.18zm10.757 6.06h2.26v-4.54h.2l3.92 4.54h2.88l-4.74-5.28 4.64-4.88h-2.86l-3.84 4.16h-.2v-4.16h-2.26v10.16zm13.244 0h2.26v-8.22h3.52v-1.94h-9.32v1.94h3.54v8.22z"
+            fill="#0C0C0D"
+          />
+        </svg>
+        <nav class="menu">
+          <aside class="menu__burger">
+            <span class="menu__burger-dot menu__burger-dot--first"></span>
+            <span class="menu__burger-line menu__burger-line--first"></span>
+            <span class="menu__burger-line menu__burger-line--second"></span>
+            <span class="menu__burger-line menu__burger-line--third"></span>
+            <span class="menu__burger-dot menu__burger-dot--second"></span>
+          </aside>
+          <div class="menu__desktop">
+            <a class="menu__desktop-element" href="#">
+              <span class="menu__desktop-element-text">как работаем</span>
+              <i class="big-arrow">
+                <svg class="big-arrow__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path d="M1.5 18.5l17-17m0 0h-15.5m15.5 0v15.5" stroke="#fff" stroke-width="3" />
+                </svg>
+              </i>
+            </a>
+            <a class="menu__desktop-element" href="#">
+              <span class="menu__desktop-element-text">форматы</span>
+              <i class="big-arrow">
+                <svg class="big-arrow__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path d="M1.5 18.5l17-17m0 0h-15.5m15.5 0v15.5" stroke="#fff" stroke-width="3" />
+                </svg>
+              </i>
+            </a>
+            <a class="menu__desktop-element" href="#">
+              <span class="menu__desktop-element-text">кейсы</span>
+              <i class="big-arrow">
+                <svg class="big-arrow__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path d="M1.5 18.5l17-17m0 0h-15.5m15.5 0v15.5" stroke="#fff" stroke-width="3" />
+                </svg>
+              </i>
+            </a>
+            <a class="menu__desktop-element" href="#">
+              <span class="menu__desktop-element-text">отзывы</span>
+              <i class="big-arrow">
+                <svg class="big-arrow__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path d="M1.5 18.5l17-17m0 0h-15.5m15.5 0v15.5" stroke="#fff" stroke-width="3" />
+                </svg>
+              </i>
+            </a>
+            <a class="menu__desktop-element" href="#">
+              <span class="menu__desktop-element-text">цены</span>
+              <i class="big-arrow">
+                <svg class="big-arrow__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path d="M1.5 18.5l17-17m0 0h-15.5m15.5 0v15.5" stroke="#fff" stroke-width="3" />
+                </svg>
+              </i>
+            </a>
+          </div>
+        </nav>
+        <a class="header__all" href="#">обратная связь</a>
+      </div>
+    </header>
+    <main class="page-exhibition main">
+      <section class="head">
+        <div class="container">
+          <div class="crumbs">
+            <a class="crumb" href="#">Главная</a>
+            <div class="crumb">Выставка</div>
+          </div>
+          <div class="head__inner">
+            <div class="head__title">Выставка</div>
+            <div class="head__anchors">
+              <a class="head__anchor head__anchor--active" href="#anchor-slider">
+                <svg class="head__anchor-icon" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path d="M4.219 13.781l9.562-9.562m0 0h-8.719m8.719 0v8.719" stroke="#fff" stroke-width="2" />
+                </svg>
+                Сценарий
+              </a>
+              <a class="head__anchor" href="#anchor-statistics">
+                <svg class="head__anchor-icon" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path d="M4.219 13.781l9.562-9.562m0 0h-8.719m8.719 0v8.719" stroke="#fff" stroke-width="2" />
+                </svg>
+                Эффективность
+              </a>
+              <a class="head__anchor" href="#anchor-tools">
+                <svg class="head__anchor-icon" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path d="M4.219 13.781l9.562-9.562m0 0h-8.719m8.719 0v8.719" stroke="#fff" stroke-width="2" />
+                </svg>
+                Инструменты
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="slider" id="anchor-slider">
+        <div class="container">
+          <div class="slider__title">Сценарий</div>
+          <div class="slider__swiper swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-slide__title">Визуальное решение и навигация как атмосфера</div>
+                <div class="swiper-slide__tags">
+                  <button class="swiper-slide__tag swiper-slide__tag--active" data-slide-number="1">2.5D</button>
+                  <button class="swiper-slide__tag" data-slide-number="2">3D</button>
+                  <button class="swiper-slide__tag" data-slide-number="3">Плиточное решение</button>
+                </div>
+                <div class="slider__swiper-inner swiper-container">
+                  <div class="swiper-wrapper">
+                    <img class="swiper-slide swiper-slide__picture" src="assets/images/exhibition.gif" alt="" loading="lazy" />
+                    <img class="swiper-slide swiper-slide__picture" src="assets/images/exhibition-2.gif" alt="" loading="lazy" />
+                    <img class="swiper-slide swiper-slide__picture" src="assets/images/exhibition-3.jpg" alt="" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide__title">Баннерная обвязка вокруг мероприятий деловой программы ЦА</div>
+                <img class="swiper-slide__picture" src="assets/images/exhibition-2.svg" alt="" loading="lazy" />
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide__title">Продвижение контента партнера через рекомендательную систему</div>
+                <img class="swiper-slide__picture" src="assets/images/exhibition-3.svg" alt="" loading="lazy" />
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide__title">Интеграция партнера в деловую программу форума</div>
+                <img class="swiper-slide__picture" src="assets/images/exhibition-4.svg" alt="" loading="lazy" />
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide__title">Интеграция вебинаров в сетку форума</div>
+                <img class="swiper-slide__picture" src="assets/images/exhibition-5.svg" alt="" loading="lazy" />
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide__title">Упаковка контента партнера</div>
+                <img class="swiper-slide__picture" src="assets/images/exhibition-6.svg" alt="" loading="lazy" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+            <!-- <div class=""> -->
+            <i class="big-arrow big-arrow--little swiper-button-prev">
+              <svg class="big-arrow__icon" width="20" height="18" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" fill="none">
+                <path d="M20 9h-18m0 0l8-8m-8 8l8 8" stroke="#fff" stroke-width="2" />
+              </svg>
+            </i>
+            <!-- </div> -->
+            <!-- <div class=""> -->
+            <i class="big-arrow big-arrow--little swiper-button-next">
+              <svg class="big-arrow__icon" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 8.99988H18M18 8.99988L10 0.999878M18 8.99988L10 16.9999" stroke="white" stroke-width="2" />
+              </svg>
+            </i>
+            <!-- </div> -->
+          </div>
+        </div>
+      </section>
+      <section class="statistics m140" id="anchor-statistics">
+        <div class="container">
+          <div class="statistics__title">Эффективность</div>
+          <div class="statistics__block">
+            <div class="statistics__column-left">
+              <div class="statistics__card">
+                <button class="statistics__card-tooltip" data-tooltip-text="Посещаемость пространства партнёра">?</button>
+                <div class="statistics__card-title">Посещаемость пространства партнёра</div>
+                <div class="statistics__card-number statistics__card-number--first" data-number-end="1 324">0</div>
+                <div class="statistics__card-min-text">Стенд посетило</div>
+              </div>
+              <div class="statistics__card">
+                <button class="statistics__card-tooltip" data-tooltip-text="Посещаемость пространства партнёра">?</button>
+                <div class="statistics__card-title">Вовлечённость в активности на пространстве партнёра</div>
+                <div class="statistics__card-text statistics__card-text--margin">Всего: 165 переходов</div>
+                <div class="statistics__card-number" data-number-end="366">0</div>
+                <div class="statistics__card-min-text">Просмотров вебинара</div>
+              </div>
+              <div class="statistics__card">
+                <button class="statistics__card-tooltip" data-tooltip-text="Посещаемость пространства партнёра">?</button>
+                <div class="statistics__card-title">Эффективность баннерной связки</div>
+                <svg class="statistics__card-circle" width="261" height="261" viewBox="0 0 261 261" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path
+                    d="M233.414 191.471c4.629 2.751 6.181 8.759 3.091 13.169-14.278 20.377-34.152 36.29-57.313 45.749-23.161 9.46-48.493 12.009-72.954 7.453-5.294-.986-8.391-6.362-7.011-11.567 1.379-5.205 6.715-8.261 12.022-7.345 20.344 3.511 41.338 1.262 60.571-6.593 19.233-7.855 35.799-20.945 47.869-37.695 3.148-4.369 9.097-5.922 13.726-3.171z"
+                    fill="#17664C"
+                  />
+                  <path
+                    d="M102.436 13.001c-1.236-5.241 2.008-10.53 7.327-11.37 23.548-3.719 47.734-.898 69.885 8.247 25.163 10.389 46.43 28.415 60.802 51.536 14.371 23.121 21.121 50.171 19.298 77.333-1.605 23.911-9.782 46.847-23.54 66.316-3.108 4.397-9.286 4.965-13.439 1.537-4.152-3.429-4.699-9.552-1.65-13.991 11.189-16.287 17.841-35.333 19.172-55.168 1.55-23.088-4.187-46.08-16.403-65.733-12.215-19.653-30.292-34.975-51.681-43.805-18.375-7.586-38.398-10.052-57.956-7.228-5.33.769-10.579-2.432-11.815-7.673z"
+                    fill="#0FAB77"
+                  />
+                  <path
+                    d="M130.003 250.29c-.002 5.384-4.374 9.786-9.744 9.381-13.94-1.052-27.642-4.347-40.57-9.778-15.929-6.692-30.365-16.493-42.463-28.828-12.098-12.336-21.616-26.96-27.996-43.016-6.381-16.057-9.497-33.224-9.166-50.499.331-17.275 4.102-34.311 11.093-50.111 6.991-15.8 17.062-30.049 29.623-41.912 12.562-11.863 27.362-21.104 43.536-27.181 13.127-4.932 26.944-7.7 40.915-8.217 5.381-.199 9.582 4.367 9.377 9.748-.204 5.381-4.739 9.532-10.117 9.803-11.377.572-22.617 2.901-33.317 6.921-13.748 5.165-26.328 13.02-37.006 23.104-10.677 10.084-19.237 22.195-25.18 35.625-5.942 13.43-9.148 27.911-9.429 42.594-.281 14.684 2.367 29.276 7.791 42.924 5.424 13.649 13.514 26.079 23.797 36.564 10.283 10.485 22.554 18.816 36.094 24.504 10.538 4.427 21.681 7.184 33.028 8.192 5.363.476 9.736 4.798 9.734 10.183z"
+                    fill="#00F7A5"
+                  />
+                  <path
+                    d="M205.124 223.968c3.362 4.206 2.697 10.374-1.75 13.412-12.013 8.208-25.34 14.354-39.431 18.161-14.091 3.806-28.699 5.207-43.212 4.165-5.371-.386-9.052-5.381-8.265-10.707.787-5.327 5.745-8.962 11.121-8.648 11.855.693 23.766-.527 35.271-3.635 11.505-3.109 22.41-8.051 32.303-14.62 4.486-2.979 10.6-2.335 13.963 1.872z"
+                    fill="#17664C"
+                  />
+                  <path
+                    d="M114.628 126.491c-1.8 1.632-4.08 2.448-6.84 2.448s-5.052-.804-6.876-2.412c-1.824-1.608-2.736-3.564-2.736-5.868 0-2.28.924-4.632 2.772-7.056l8.316-10.944 3.924-.036-7.488 9.936c.888-.384 1.812-.576 2.772-.576 2.568 0 4.68.792 6.336 2.376 1.68 1.56 2.52 3.54 2.52 5.94 0 2.496-.9 4.56-2.7 6.192zm-6.768-.468c1.8-.024 3.276-.564 4.428-1.62 1.176-1.08 1.764-2.448 1.764-4.104 0-1.608-.588-2.928-1.764-3.96-1.152-1.056-2.616-1.584-4.392-1.584-1.872-.024-3.42.492-4.644 1.548-1.2 1.056-1.8 2.4-1.8 4.032 0 1.656.6 3.024 1.8 4.104 1.2 1.08 2.736 1.608 4.608 1.584zm29.585.468c-1.8 1.632-4.08 2.448-6.84 2.448s-5.052-.804-6.876-2.412c-1.824-1.608-2.736-3.564-2.736-5.868 0-2.28.924-4.632 2.772-7.056l8.316-10.944 3.924-.036-7.488 9.936c.888-.384 1.812-.576 2.772-.576 2.568 0 4.68.792 6.336 2.376 1.68 1.56 2.52 3.54 2.52 5.94 0 2.496-.9 4.56-2.7 6.192zm-6.768-.468c1.8-.024 3.276-.564 4.428-1.62 1.176-1.08 1.764-2.448 1.764-4.104 0-1.608-.588-2.928-1.764-3.96-1.152-1.056-2.616-1.584-4.392-1.584-1.872-.024-3.42.492-4.644 1.548-1.2 1.056-1.8 2.4-1.8 4.032 0 1.656.6 3.024 1.8 4.104 1.2 1.08 2.736 1.608 4.608 1.584zm30.124.756c-1.8 1.416-4.104 2.124-6.912 2.124s-5.124-.708-6.948-2.124c-1.824-1.416-2.736-3.216-2.736-5.4 0-1.632.492-3.06 1.476-4.284.984-1.248 2.244-2.052 3.78-2.412v-.36c-1.176-.408-2.172-1.14-2.988-2.196-.792-1.08-1.188-2.268-1.188-3.564 0-2.016.804-3.66 2.412-4.932 1.608-1.272 3.672-1.908 6.192-1.908 2.496 0 4.548.636 6.156 1.908 1.608 1.272 2.412 2.916 2.412 4.932 0 1.296-.408 2.484-1.224 3.564-.816 1.056-1.812 1.788-2.988 2.196v.36c1.56.36 2.832 1.164 3.816 2.412.984 1.224 1.476 2.652 1.476 4.284 0 2.184-.912 3.984-2.736 5.4zm-6.912-13.572c1.512 0 2.76-.408 3.744-1.224 1.008-.816 1.512-1.848 1.512-3.096s-.504-2.268-1.512-3.06c-.984-.816-2.232-1.224-3.744-1.224-1.536 0-2.808.408-3.816 1.224-.984.792-1.476 1.812-1.476 3.06s.492 2.28 1.476 3.096c1.008.816 2.28 1.224 3.816 1.224zm-4.356 11.412c1.152.936 2.604 1.404 4.356 1.404 1.752 0 3.204-.468 4.356-1.404 1.152-.936 1.728-2.124 1.728-3.564s-.588-2.628-1.764-3.564c-1.152-.936-2.592-1.404-4.32-1.404-1.752 0-3.204.468-4.356 1.404-1.152.936-1.728 2.124-1.728 3.564s.576 2.628 1.728 3.564zM88.272 156.039v-8.08h7.52v8.08h-1.328v-6.88h-4.864v6.88h-1.328zm13.936.32c-1.269 0-2.315-.421-3.136-1.264-.821-.842-1.232-1.909-1.232-3.2 0-1.237.4-2.256 1.2-3.056.811-.8 1.84-1.2 3.088-1.2 1.237 0 2.256.406 3.056 1.216.8.8 1.2 1.819 1.2 3.056 0 .235-.005.411-.016.528h-7.152c.096.822.416 1.483.96 1.984.555.491 1.237.736 2.048.736.608 0 1.157-.138 1.648-.416.501-.288.875-.672 1.12-1.152l1.104.56c-.32.694-.827 1.238-1.52 1.632-.683.384-1.472.576-2.368.576zm-2.976-5.088h5.744c-.117-.725-.443-1.312-.976-1.76-.523-.448-1.163-.672-1.92-.672-.747 0-1.381.224-1.904.672-.512.438-.827 1.024-.944 1.76zm13.612-3.632c1.184 0 2.176.411 2.976 1.232.8.822 1.2 1.862 1.2 3.12 0 1.259-.4 2.304-1.2 3.136-.789.822-1.776 1.232-2.96 1.232-.65 0-1.237-.133-1.76-.4-.512-.266-.917-.64-1.216-1.12h-.144v4.88h-1.328v-11.76h1.328v1.232h.144c.63-1.034 1.616-1.552 2.96-1.552zm2 2.096c-.565-.597-1.28-.896-2.144-.896-.864 0-1.584.304-2.16.912-.565.598-.848 1.344-.848 2.24 0 .896.283 1.648.848 2.256.576.608 1.296.912 2.16.912.854 0 1.563-.304 2.128-.912.576-.608.864-1.36.864-2.256 0-.906-.282-1.658-.848-2.256zm8.176 6.624c-1.269 0-2.314-.421-3.136-1.264-.821-.842-1.232-1.909-1.232-3.2 0-1.237.4-2.256 1.2-3.056.811-.8 1.84-1.2 3.088-1.2 1.238 0 2.256.406 3.056 1.216.8.8 1.2 1.819 1.2 3.056 0 .235-.005.411-.016.528h-7.152c.096.822.416 1.483.96 1.984.555.491 1.238.736 2.048.736.608 0 1.158-.138 1.648-.416.502-.288.875-.672 1.12-1.152l1.104.56c-.32.694-.826 1.238-1.52 1.632-.682.384-1.472.576-2.368.576zm-2.976-5.088h5.744c-.117-.725-.442-1.312-.976-1.76-.522-.448-1.162-.672-1.92-.672-.746 0-1.381.224-1.904.672-.512.438-.826 1.024-.944 1.76zm7.86 4.768l3.04-4.208-2.88-3.872h1.424l2.208 3.008h.16l2.208-3.008h1.424l-2.88 3.872 3.04 4.208h-1.472l-2.32-3.296h-.16l-2.32 3.296h-1.472zm15.907-.896c-.81.811-1.85 1.216-3.12 1.216-1.269 0-2.309-.405-3.12-1.216-.81-.821-1.216-1.872-1.216-3.152 0-1.269.406-2.309 1.216-3.12.811-.821 1.851-1.232 3.12-1.232 1.27 0 2.31.411 3.12 1.232.811.811 1.216 1.851 1.216 3.12 0 1.28-.405 2.331-1.216 3.152zm-5.28-.88c.566.598 1.286.896 2.16.896.875 0 1.595-.298 2.16-.896.566-.597.848-1.354.848-2.272 0-.917-.282-1.669-.848-2.256-.565-.597-1.285-.896-2.16-.896-.874 0-1.594.299-2.16.896-.565.587-.848 1.339-.848 2.256 0 .918.283 1.675.848 2.272zm7.313 4.176v-3.6h1.056c.331-.234.581-.581.752-1.04.171-.458.304-1.12.4-1.984l.448-3.856h5.632v6.88h1.36v3.6h-1.184v-2.4h-7.28v2.4h-1.184zm2.432-3.6h4.528v-5.68h-3.168l-.384 3.216c-.128 1.078-.453 1.846-.976 2.304v.16zm15.738.304c-.81.811-1.85 1.216-3.12 1.216-1.269 0-2.309-.405-3.12-1.216-.81-.821-1.216-1.872-1.216-3.152 0-1.269.406-2.309 1.216-3.12.811-.821 1.851-1.232 3.12-1.232 1.27 0 2.31.411 3.12 1.232.811.811 1.216 1.851 1.216 3.12 0 1.28-.405 2.331-1.216 3.152zm-5.28-.88c.566.598 1.286.896 2.16.896.875 0 1.595-.298 2.16-.896.566-.597.848-1.354.848-2.272 0-.917-.282-1.669-.848-2.256-.565-.597-1.285-.896-2.16-.896-.874 0-1.594.299-2.16.896-.565.587-.848 1.339-.848 2.256 0 .918.283 1.675.848 2.272zm8.522 1.776v-8.08h4.048c.725 0 1.323.192 1.792.576.469.384.704.864.704 1.44 0 .416-.117.779-.352 1.088-.224.31-.517.528-.88.656v.16c.437.096.789.304 1.056.624.277.31.416.71.416 1.2 0 .683-.251 1.243-.752 1.68-.491.438-1.131.656-1.92.656h-4.112zm1.328-4.8h2.576c.384 0 .699-.101.944-.304.256-.202.384-.453.384-.752 0-.298-.128-.554-.384-.768-.245-.213-.56-.32-.944-.32h-2.576v2.144zm0 3.664h2.56c.459 0 .832-.122 1.12-.368.299-.256.448-.565.448-.928 0-.352-.149-.64-.448-.864-.288-.234-.661-.352-1.12-.352h-2.56v2.512z"
+                    fill="#fff"
+                  />
+                </svg>
+              </div>
+              <div class="statistics__card">
+                <button class="statistics__card-tooltip" data-tooltip-text="Посещаемость пространства партнёра">?</button>
+                <div class="statistics__card-title">Проведённые встречи</div>
+                <div class="statistics__card-inner">
+                  <div class="statistics__card-column">
+                    <div class="statistics__card-column-number">16</div>
+                    <div class="statistics__card-column-text">Встреч назначено</div>
+                  </div>
+                  <div class="statistics__card-column">
+                    <div class="statistics__card-column-number">30</div>
+                    <div class="statistics__card-column-text">Запросов на встречу</div>
+                  </div>
+                </div>
+                <div class="statistics__card-line">
+                  <div class="statistics__card-line-current" style="max-width: 60%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="statistics__column-right">
+              <div class="statistics__card">
+                <button class="statistics__card-tooltip" data-tooltip-text="Посещаемость пространства партнёра">?</button>
+                <div class="statistics__card-title">Интерес к продуктам</div>
+                <div class="statistics__card-text">267 просмотра</div>
+                <div class="statistics__card-grid">
+                  <div class="statistics__card-grid-name">Продукт 1</div>
+                  <div class="statistics__card-grid-percent">46%</div>
+                  <div class="statistics__card-line">
+                    <div class="statistics__card-line-current" style="max-width: 46%"></div>
+                  </div>
+                  <div class="statistics__card-grid-name">Продукт 2</div>
+                  <div class="statistics__card-grid-percent">37%</div>
+                  <div class="statistics__card-line">
+                    <div class="statistics__card-line-current" style="max-width: 37%"></div>
+                  </div>
+                  <div class="statistics__card-grid-name">Продукт 3</div>
+                  <div class="statistics__card-grid-percent">16%</div>
+                  <div class="statistics__card-line">
+                    <div class="statistics__card-line-current" style="max-width: 16%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="statistics__card">
+                <button class="statistics__card-tooltip" data-tooltip-text="Посещаемость пространства партнёра">?</button>
+                <div class="statistics__card-title">Переходы на сайт партнёра</div>
+                <div class="statistics__card-text">Всего: 165 переходов</div>
+                <div class="statistics__card-diagram">
+                  <div class="statistics__card-diagram-inner">
+                    <div class="statistics__card-diagram-column" style="height: 100%"></div>
+                    <div class="statistics__card-diagram-text">Сайт</div>
+                  </div>
+                  <div class="statistics__card-diagram-inner">
+                    <div class="statistics__card-diagram-column" style="height: 10%"></div>
+                    <div class="statistics__card-diagram-text">VK</div>
+                  </div>
+                  <div class="statistics__card-diagram-inner">
+                    <div class="statistics__card-diagram-column" style="height: 30%"></div>
+                    <div class="statistics__card-diagram-text">Instagram</div>
+                  </div>
+                  <div class="statistics__card-diagram-inner">
+                    <div class="statistics__card-diagram-column" style="height: 40%"></div>
+                    <div class="statistics__card-diagram-text">Facebook</div>
+                  </div>
+                </div>
+              </div>
+              <div class="statistics__card">
+                <button class="statistics__card-tooltip" data-tooltip-text="Посещаемость пространства партнёра">?</button>
+                <div class="statistics__card-title">Лиды</div>
+                <div class="statistics__card-text">Всего: 1 020</div>
+                <div class="statistics__card-grid">
+                  <div class="statistics__card-grid-name">Получено контактов</div>
+                  <div class="statistics__card-grid-percent">480</div>
+                  <div class="statistics__card-line">
+                    <div class="statistics__card-line-current" style="max-width: 48%"></div>
+                  </div>
+                  <div class="statistics__card-grid-name">Зарегистрированных на вебинар</div>
+                  <div class="statistics__card-grid-percent">366</div>
+                  <div class="statistics__card-line">
+                    <div class="statistics__card-line-current" style="max-width: 36%"></div>
+                  </div>
+                  <div class="statistics__card-grid-name">Запросы на материалы</div>
+                  <div class="statistics__card-grid-percent">86</div>
+                  <div class="statistics__card-line">
+                    <div class="statistics__card-line-current" style="max-width: 9%"></div>
+                  </div>
+                  <div class="statistics__card-grid-name">Участие в опросах</div>
+                  <div class="statistics__card-grid-percent">48</div>
+                  <div class="statistics__card-line">
+                    <div class="statistics__card-line-current" style="max-width: 5%"></div>
+                  </div>
+                  <div class="statistics__card-grid-name">Обмен контактами</div>
+                  <div class="statistics__card-grid-percent">40</div>
+                  <div class="statistics__card-line">
+                    <div class="statistics__card-line-current" style="max-width: 4%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="tools m140" id="anchor-tools">
+        <div class="container">
+          <div class="tools__title">Инструменты</div>
+          <div class="tools__block">
+            <div class="tools__element">
+              <div class="tools__element-modal">
+                <div class="tools__element-modal-head">
+                  <svg class="tools__element-modal-icon" width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <path
+                      d="M38.543 48.814l-6.62-3.831v-15.325l6.62-3.831 6.641 3.831v15.325l-6.641 3.831zM45.184 14.331v7.663l-13.261 7.663-6.641-3.831v-7.663l13.261-7.663 6.641 3.831zM12 25.826v7.663l13.282 7.663 6.641-3.831v-7.663l-13.282-7.663-6.641 3.831z"
+                      stroke="#fff"
+                      stroke-miterlimit="10"
+                    />
+                  </svg>
+                  <div class="tools__element-modal-title">Административная панель</div>
+                </div>
+                <div class="tools__element-modal-text">
+                  Личный кабинет для загрузки всех данных (фото, видео, текст, мероприятия). Все данные синхронизируются с платформой в реальном
+                  времени.
+                </div>
+                <div class="tools__element-modal-text">
+                  При включение элементов лидогенерации, экспонент получает данные посетителей в свой кабинет. Личный кабинет также включает в себя
+                  статистический дашборд с метриками эффективности своего стенда.
+                </div>
+              </div>
+              <div class="tools__element-inner">
+                <svg class="tools__element-icon" width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path
+                    d="M38.543 48.814l-6.62-3.831v-15.325l6.62-3.831 6.641 3.831v15.325l-6.641 3.831zM45.184 14.331v7.663l-13.261 7.663-6.641-3.831v-7.663l13.261-7.663 6.641 3.831zM12 25.826v7.663l13.282 7.663 6.641-3.831v-7.663l-13.282-7.663-6.641 3.831z"
+                    stroke="#fff"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+                <div class="tools__element-text">Административная панель</div>
+              </div>
+            </div>
+            <div class="tools__element">
+              <div class="tools__element-modal">
+                <div class="tools__element-modal-head">
+                  <svg class="tools__element-modal-icon" width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <path
+                      d="M38.543 48.814l-6.62-3.831v-15.325l6.62-3.831 6.641 3.831v15.325l-6.641 3.831zM45.184 14.331v7.663l-13.261 7.663-6.641-3.831v-7.663l13.261-7.663 6.641 3.831zM12 25.826v7.663l13.282 7.663 6.641-3.831v-7.663l-13.282-7.663-6.641 3.831z"
+                      stroke="#fff"
+                      stroke-miterlimit="10"
+                    />
+                  </svg>
+                  <div class="tools__element-modal-title">Административная панель</div>
+                </div>
+                <div class="tools__element-modal-text">
+                  Личный кабинет для загрузки всех данных (фото, видео, текст, мероприятия). Все данные синхронизируются с платформой в реальном
+                  времени.
+                </div>
+                <div class="tools__element-modal-text">
+                  При включение элементов лидогенерации, экспонент получает данные посетителей в свой кабинет. Личный кабинет также включает в себя
+                  статистический дашборд с метриками эффективности своего стенда.
+                </div>
+              </div>
+              <div class="tools__element-inner">
+                <svg width="60" height="59" viewBox="0 0 60 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path
+                    d="M41 19c0 3.869-3.131 7-7 7M27 33c0-3.869 3.131-7 7-7M13 47c0-3.869 3.131-7 7-7M41 19c0-3.869 3.131-7 7-7M27 33c0 3.869-3.131 7-7 7M48 26c0 3.869-3.131 7-7 7M34 40c0-3.869 3.131-7 7-7M41 47c0-3.869 3.131-7 7-7M13 19c0-3.869 3.131-7 7-7M34 40c0 3.869-3.131 7-7 7M34 12c0 3.869-3.131 7-7 7M20 26c0-3.869 3.131-7 7-7M20 26c0 3.869-3.131 7-7 7"
+                    stroke="#fff"
+                    stroke-width="1.4"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+                <div class="tools__element-text">Организация трансляций</div>
+              </div>
+            </div>
+            <div class="tools__element tools__element--big">
+              <div class="tools__element-modal">
+                <div class="tools__element-modal-head">
+                  <svg class="tools__element-modal-icon" width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <path
+                      d="M38.543 48.814l-6.62-3.831v-15.325l6.62-3.831 6.641 3.831v15.325l-6.641 3.831zM45.184 14.331v7.663l-13.261 7.663-6.641-3.831v-7.663l13.261-7.663 6.641 3.831zM12 25.826v7.663l13.282 7.663 6.641-3.831v-7.663l-13.282-7.663-6.641 3.831z"
+                      stroke="#fff"
+                      stroke-miterlimit="10"
+                    />
+                  </svg>
+                  <div class="tools__element-modal-title">Административная панель</div>
+                </div>
+                <div class="tools__element-modal-text">
+                  Личный кабинет для загрузки всех данных (фото, видео, текст, мероприятия). Все данные синхронизируются с платформой в реальном
+                  времени.
+                </div>
+                <div class="tools__element-modal-text">
+                  При включение элементов лидогенерации, экспонент получает данные посетителей в свой кабинет. Личный кабинет также включает в себя
+                  статистический дашборд с метриками эффективности своего стенда.
+                </div>
+              </div>
+              <div class="tools__element-inner">
+                <svg class="tools__element-icon" width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path
+                    d="M29.5 19.531l8.261 4.766-8.261 4.766-8.261-4.766 8.261-4.766zM29.5 29.063l-8.261-4.766v9.531l8.261 4.766v-9.532zM21.239 24.297l-8.239-4.766v9.531l8.239 4.766v-9.531zM29.5 38.594l-8.261-4.766v9.532l8.261 4.766v-9.532zM21.239 33.829l-8.239-4.766v9.531l8.239 4.766v-9.532zM21.239 14.766l8.261 4.766-8.261 4.766-8.239-4.766 8.239-4.766zM37.761 14.766l8.239 4.766-8.239 4.766-8.261-4.766 8.261-4.766zM29.5 10l8.261 4.766-8.261 4.766-8.261-4.766 8.261-4.766zM29.5 29.063l8.261-4.766v9.531l-8.261 4.766v-9.532zM37.761 24.297l8.239-4.766v9.531l-8.239 4.766v-9.531zM29.5 38.594l8.261-4.766v9.532l-8.261 4.766v-9.532zM37.761 33.829l8.239-4.766v9.531l-8.239 4.766v-9.532z"
+                    stroke="#fff"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+                <div class="tools__element-text">Презентация продукта в формате вебинара</div>
+              </div>
+            </div>
+            <div class="tools__element tools__element--big">
+              <div class="tools__element-modal">
+                <div class="tools__element-modal-head">
+                  <svg class="tools__element-modal-icon" width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <path
+                      d="M38.543 48.814l-6.62-3.831v-15.325l6.62-3.831 6.641 3.831v15.325l-6.641 3.831zM45.184 14.331v7.663l-13.261 7.663-6.641-3.831v-7.663l13.261-7.663 6.641 3.831zM12 25.826v7.663l13.282 7.663 6.641-3.831v-7.663l-13.282-7.663-6.641 3.831z"
+                      stroke="#fff"
+                      stroke-miterlimit="10"
+                    />
+                  </svg>
+                  <div class="tools__element-modal-title">Административная панель</div>
+                </div>
+                <div class="tools__element-modal-text">
+                  Личный кабинет для загрузки всех данных (фото, видео, текст, мероприятия). Все данные синхронизируются с платформой в реальном
+                  времени.
+                </div>
+                <div class="tools__element-modal-text">
+                  При включение элементов лидогенерации, экспонент получает данные посетителей в свой кабинет. Личный кабинет также включает в себя
+                  статистический дашборд с метриками эффективности своего стенда.
+                </div>
+              </div>
+              <div class="tools__element-inner">
+                <svg class="tools__element-icon" width="60" height="59" viewBox="0 0 60 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path
+                    d="M30.333 47c4.832 0 8.75-3.917 8.75-8.75s-3.918-8.75-8.75-8.75-8.75 3.917-8.75 8.75 3.918 8.75 8.75 8.75zM30.333 29.5c4.832 0 8.75-3.918 8.75-8.75s-3.918-8.75-8.75-8.75-8.75 3.918-8.75 8.75 3.918 8.75 8.75 8.75zM37.917 42.625c4.833 0 8.75-3.917 8.75-8.75 0-4.832-3.917-8.75-8.75-8.75-4.832 0-8.75 3.918-8.75 8.75 0 4.833 3.918 8.75 8.75 8.75zM22.75 33.875c4.832 0 8.75-3.918 8.75-8.75s-3.918-8.75-8.75-8.75-8.75 3.918-8.75 8.75 3.918 8.75 8.75 8.75zM37.917 33.875c4.833 0 8.75-3.918 8.75-8.75s-3.917-8.75-8.75-8.75c-4.832 0-8.75 3.918-8.75 8.75s3.918 8.75 8.75 8.75zM22.75 42.625c4.832 0 8.75-3.917 8.75-8.75 0-4.832-3.918-8.75-8.75-8.75s-8.75 3.918-8.75 8.75c0 4.833 3.918 8.75 8.75 8.75z"
+                    stroke="#fff"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+                <div class="tools__element-text">Персонализированный личный кабинет посетителя</div>
+              </div>
+            </div>
+            <div class="tools__element">
+              <div class="tools__element-modal">
+                <div class="tools__element-modal-head">
+                  <svg class="tools__element-modal-icon" width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <path
+                      d="M38.543 48.814l-6.62-3.831v-15.325l6.62-3.831 6.641 3.831v15.325l-6.641 3.831zM45.184 14.331v7.663l-13.261 7.663-6.641-3.831v-7.663l13.261-7.663 6.641 3.831zM12 25.826v7.663l13.282 7.663 6.641-3.831v-7.663l-13.282-7.663-6.641 3.831z"
+                      stroke="#fff"
+                      stroke-miterlimit="10"
+                    />
+                  </svg>
+                  <div class="tools__element-modal-title">Административная панель</div>
+                </div>
+                <div class="tools__element-modal-text">
+                  Личный кабинет для загрузки всех данных (фото, видео, текст, мероприятия). Все данные синхронизируются с платформой в реальном
+                  времени.
+                </div>
+                <div class="tools__element-modal-text">
+                  При включение элементов лидогенерации, экспонент получает данные посетителей в свой кабинет. Личный кабинет также включает в себя
+                  статистический дашборд с метриками эффективности своего стенда.
+                </div>
+              </div>
+              <div class="tools__element-inner">
+                <svg class="tools__element-icon" width="60" height="59" viewBox="0 0 60 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path
+                    d="M30 46c9.113 0 16.5-7.387 16.5-16.5s-7.387-16.5-16.5-16.5-16.5 7.387-16.5 16.5 7.387 16.5 16.5 16.5zM30 46c4.556 0 8.25-7.387 8.25-16.5s-3.694-16.5-8.25-16.5-8.25 7.387-8.25 16.5 3.694 16.5 8.25 16.5zM30 46v-33"
+                    stroke="#fff"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M30 46c9.113 0 16.5-7.387 16.5-16.5s-7.387-16.5-16.5-16.5-16.5 7.387-16.5 16.5 7.387 16.5 16.5 16.5zM30 37.75c9.113 0 16.5-3.694 16.5-8.25s-7.387-8.25-16.5-8.25-16.5 3.694-16.5 8.25 7.387 8.25 16.5 8.25zM13.5 29.5h33"
+                    stroke="#fff"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+                <div class="tools__element-text">Презентационные материалы</div>
+              </div>
+            </div>
+            <div class="tools__element">
+              <div class="tools__element-modal">
+                <div class="tools__element-modal-head">
+                  <svg class="tools__element-modal-icon" width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <path
+                      d="M38.543 48.814l-6.62-3.831v-15.325l6.62-3.831 6.641 3.831v15.325l-6.641 3.831zM45.184 14.331v7.663l-13.261 7.663-6.641-3.831v-7.663l13.261-7.663 6.641 3.831zM12 25.826v7.663l13.282 7.663 6.641-3.831v-7.663l-13.282-7.663-6.641 3.831z"
+                      stroke="#fff"
+                      stroke-miterlimit="10"
+                    />
+                  </svg>
+                  <div class="tools__element-modal-title">Административная панель</div>
+                </div>
+                <div class="tools__element-modal-text">
+                  Личный кабинет для загрузки всех данных (фото, видео, текст, мероприятия). Все данные синхронизируются с платформой в реальном
+                  времени.
+                </div>
+                <div class="tools__element-modal-text">
+                  При включение элементов лидогенерации, экспонент получает данные посетителей в свой кабинет. Личный кабинет также включает в себя
+                  статистический дашборд с метриками эффективности своего стенда.
+                </div>
+              </div>
+              <div class="tools__element-inner">
+                <svg class="tools__element-icon" width="60" height="59" viewBox="0 0 60 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path
+                    d="M30.001 27.245c-4.903 0-8.878 3.974-8.878 8.877 0 4.903 3.975 8.878 8.878 8.878 4.903 0 8.878-3.975 8.878-8.878 0-4.903-3.975-8.877-8.878-8.877zM22.301 13.928c-4.903 0-8.878 3.975-8.877 8.878 0 4.903 3.975 8.878 8.877 8.878 4.903 0 8.878-3.975 8.878-8.878 0-4.903-3.975-8.878-8.878-8.878zM37.699 13.928c-4.903 0-8.878 3.975-8.878 8.878 0 4.903 3.975 8.878 8.878 8.878 4.903 0 8.878-3.975 8.878-8.878 0-4.903-3.975-8.878-8.878-8.878z"
+                    stroke="#fff"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+                <div class="tools__element-text">Регистрация через соц. сети</div>
+              </div>
+            </div>
+            <div class="tools__element">
+              <div class="tools__element-modal">
+                <div class="tools__element-modal-head">
+                  <svg class="tools__element-modal-icon" width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <path
+                      d="M38.543 48.814l-6.62-3.831v-15.325l6.62-3.831 6.641 3.831v15.325l-6.641 3.831zM45.184 14.331v7.663l-13.261 7.663-6.641-3.831v-7.663l13.261-7.663 6.641 3.831zM12 25.826v7.663l13.282 7.663 6.641-3.831v-7.663l-13.282-7.663-6.641 3.831z"
+                      stroke="#fff"
+                      stroke-miterlimit="10"
+                    />
+                  </svg>
+                  <div class="tools__element-modal-title">Административная панель</div>
+                </div>
+                <div class="tools__element-modal-text">
+                  Личный кабинет для загрузки всех данных (фото, видео, текст, мероприятия). Все данные синхронизируются с платформой в реальном
+                  времени.
+                </div>
+                <div class="tools__element-modal-text">
+                  При включение элементов лидогенерации, экспонент получает данные посетителей в свой кабинет. Личный кабинет также включает в себя
+                  статистический дашборд с метриками эффективности своего стенда.
+                </div>
+              </div>
+              <div class="tools__element-inner">
+                <svg class="tools__element-icon" width="60" height="59" viewBox="0 0 60 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path
+                    d="M33.304 44.313l-6.608-3.813v-15.25l6.608-3.813 6.608 3.813v15.25l-6.608 3.813zM39.913 48.126l-6.608-3.813v-15.25l6.608-3.813 6.587 3.813v15.25l-6.587 3.813zM46.5 21.438v7.625l-13.196 7.625-6.608-3.813v-7.625l13.217-7.625 6.587 3.813zM46.5 13.813v7.625l-13.196 7.625-6.608-3.813v-7.625l13.217-7.625 6.587 3.813zM20.087 21.438v7.625l13.217 7.625 6.608-3.813v-7.625l-13.217-7.625-6.608 3.813zM13.5 25.25v7.625l13.196 7.625 6.609-3.813v-7.625l-13.217-7.625-6.587 3.813z"
+                    stroke="#fff"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+                <div class="tools__element-text">Визуальные решения</div>
+              </div>
+            </div>
+            <div class="tools__element">
+              <div class="tools__element-modal">
+                <div class="tools__element-modal-head">
+                  <svg class="tools__element-modal-icon" width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <path
+                      d="M38.543 48.814l-6.62-3.831v-15.325l6.62-3.831 6.641 3.831v15.325l-6.641 3.831zM45.184 14.331v7.663l-13.261 7.663-6.641-3.831v-7.663l13.261-7.663 6.641 3.831zM12 25.826v7.663l13.282 7.663 6.641-3.831v-7.663l-13.282-7.663-6.641 3.831z"
+                      stroke="#fff"
+                      stroke-miterlimit="10"
+                    />
+                  </svg>
+                  <div class="tools__element-modal-title">Административная панель</div>
+                </div>
+                <div class="tools__element-modal-text">
+                  Личный кабинет для загрузки всех данных (фото, видео, текст, мероприятия). Все данные синхронизируются с платформой в реальном
+                  времени.
+                </div>
+                <div class="tools__element-modal-text">
+                  При включение элементов лидогенерации, экспонент получает данные посетителей в свой кабинет. Личный кабинет также включает в себя
+                  статистический дашборд с метриками эффективности своего стенда.
+                </div>
+              </div>
+              <div class="tools__element-inner">
+                <svg class="tools__element-icon" width="60" height="59" viewBox="0 0 60 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path
+                    d="M48.338 34.792c2.32 2.32 2.32 6.09 0 8.41-2.32 2.32-6.09 2.32-8.41 0-2.32-2.32-6.09-2.32-8.409 0-2.32 2.32-6.09 2.32-8.41 0-2.32-2.32-2.32-6.09 0-8.41 2.32-2.32 6.09-2.32 8.41 0 2.32 2.32 6.09 2.32 8.409 0 2.32-2.32 6.09-2.32 8.41 0zM21.592 14.492c.848-3.168 4.104-5.041 7.272-4.194 3.167.848 5.041 4.104 4.194 7.272-.848 3.168 1.026 6.424 4.194 7.272 3.168.848 5.041 4.104 4.194 7.272-.848 3.168-4.104 5.041-7.272 4.194-3.168-.848-5.041-4.104-4.194-7.272.848-3.168-1.026-6.424-4.194-7.272-3.145-.848-5.041-4.104-4.194-7.272zM17.398 47.796c-3.167.848-6.424-1.026-7.272-4.194-.848-3.168 1.026-6.424 4.194-7.272 3.168-.848 5.041-4.104 4.194-7.272-.848-3.168 1.026-6.424 4.194-7.272 3.168-.848 6.424 1.026 7.272 4.194.848 3.168-1.026 6.424-4.194 7.272-3.168.848-5.041 4.104-4.194 7.272.87 3.168-1.026 6.424-4.194 7.272z"
+                    stroke="#fff"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+                <div class="tools__element-text">Тестирования</div>
+              </div>
+            </div>
+            <div class="tools__element">
+              <div class="tools__element-modal">
+                <div class="tools__element-modal-head">
+                  <svg class="tools__element-modal-icon" width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <path
+                      d="M38.543 48.814l-6.62-3.831v-15.325l6.62-3.831 6.641 3.831v15.325l-6.641 3.831zM45.184 14.331v7.663l-13.261 7.663-6.641-3.831v-7.663l13.261-7.663 6.641 3.831zM12 25.826v7.663l13.282 7.663 6.641-3.831v-7.663l-13.282-7.663-6.641 3.831z"
+                      stroke="#fff"
+                      stroke-miterlimit="10"
+                    />
+                  </svg>
+                  <div class="tools__element-modal-title">Административная панель</div>
+                </div>
+                <div class="tools__element-modal-text">
+                  Личный кабинет для загрузки всех данных (фото, видео, текст, мероприятия). Все данные синхронизируются с платформой в реальном
+                  времени.
+                </div>
+                <div class="tools__element-modal-text">
+                  При включение элементов лидогенерации, экспонент получает данные посетителей в свой кабинет. Личный кабинет также включает в себя
+                  статистический дашборд с метриками эффективности своего стенда.
+                </div>
+              </div>
+              <div class="tools__element-inner">
+                <svg width="60" height="59" viewBox="0 0 60 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path
+                    d="M30 46l12.013-4.968M47 29l-17 17M42.013 16.987l-12.013 29.013M30 12v34M17.986 16.987l12.013 29.013M13 29l17 17M17.986 41.032l12.013 4.968M30 12l12.013 4.987M47 29l-17-17M42.013 41.032l-12.013-29.032M30 46v-34M17.986 41.032l12.013-29.032M13 29l17-17M17.986 16.987l12.013-4.987"
+                    stroke="#fff"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+                <div class="tools__element-text">Рассылки</div>
+              </div>
+            </div>
+            <div class="tools__element">
+              <div class="tools__element-modal">
+                <div class="tools__element-modal-head">
+                  <svg class="tools__element-modal-icon" width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <path
+                      d="M38.543 48.814l-6.62-3.831v-15.325l6.62-3.831 6.641 3.831v15.325l-6.641 3.831zM45.184 14.331v7.663l-13.261 7.663-6.641-3.831v-7.663l13.261-7.663 6.641 3.831zM12 25.826v7.663l13.282 7.663 6.641-3.831v-7.663l-13.282-7.663-6.641 3.831z"
+                      stroke="#fff"
+                      stroke-miterlimit="10"
+                    />
+                  </svg>
+                  <div class="tools__element-modal-title">Административная панель</div>
+                </div>
+                <div class="tools__element-modal-text">
+                  Личный кабинет для загрузки всех данных (фото, видео, текст, мероприятия). Все данные синхронизируются с платформой в реальном
+                  времени.
+                </div>
+                <div class="tools__element-modal-text">
+                  При включение элементов лидогенерации, экспонент получает данные посетителей в свой кабинет. Личный кабинет также включает в себя
+                  статистический дашборд с метриками эффективности своего стенда.
+                </div>
+              </div>
+              <div class="tools__element-inner">
+                <svg width="60" height="59" viewBox="0 0 60 59" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path
+                    d="M47 24.268v9.826l-4.255 2.442-4.255-2.442v-9.826l4.255-2.442 4.255 2.442zM34.255 12l8.49 4.922v4.903l-4.255 2.442-8.49-4.903v-4.903l4.255-2.461zM17.256 16.922l8.49-4.922 4.255 2.461v4.903l-8.49 4.903-4.255-2.442v-4.903zM13 34.094v-9.826l4.255-2.442 4.255 2.442v9.826l-4.255 2.442-4.255-2.442zM25.746 46.343l-8.49-4.903v-4.903l4.255-2.442 8.49 4.903v4.903l-4.255 2.442zM42.745 41.439l-8.49 4.903-4.255-2.442v-4.903l8.49-4.903 4.255 2.442v4.903zM38.49 34.093l-8.49 4.903-4.255-2.461v-4.903l8.509-4.903 4.236 2.442v4.922zM34.254 26.729l-8.509 4.903-4.236-2.461v-4.903l8.49-4.903 4.255 2.461v4.903z"
+                    stroke="#fff"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+                <div class="tools__element-text">Галерея продукта</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__question">
+          <img class="footer__question-picture" src="assets/images/footer.jpg" alt="" />
+          <div class="footer__question-title">Остались вопросы?</div>
+          <button class="footer__question-button callback-button">задать вопрос</button>
+        </div>
+        <div class="footer__cops">
+          <div class="footer__text">© 2020-2021, ММСО.Онлайн</div>
+          <div class="footer__text">online@mmco-expo.ru</div>
+          <a class="footer__text" href="#">Политика конфиденциольности</a>
+          <div class="footer__text footer__text--design">Задизайнено с любовью в ❤️ MateÇa</div>
+        </div>
+      </div>
+      <div class="footer__design">Задизайнено с любовью в ❤️ MateÇa</div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/main.min.js"></script>
+  </body>
+</html>

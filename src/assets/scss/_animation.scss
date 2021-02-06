@@ -1,0 +1,126 @@
+@keyframes menu {
+  from {
+    left: 100vw;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes swing {
+  15% {
+    transform: translateX(6px);
+  }
+  30% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(3px);
+  }
+  50% {
+    transform: translateX(-3px);
+  }
+  65% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes switch-element-menu {
+  10% {
+    margin-top: 5px;
+  }
+  20% {
+    margin-top: 15px;
+  }
+  30% {
+    margin-top: 25px;
+  }
+  40% {
+    margin-top: 35px;
+  }
+  50% {
+    margin-top: 40px;
+    color: var(--black);
+  }
+  60% {
+    margin-top: 35px;
+    color: var(--black);
+  }
+  70% {
+    margin-top: 25px;
+    color: var(--black);
+  }
+  80% {
+    margin-top: 15px;
+    color: var(--black);
+  }
+  90% {
+    margin-top: 5px;
+    color: var(--black);
+  }
+  100% {
+    margin-top: 0px;
+    color: var(--black);
+  }
+}
+@keyframes burger-dot-one {
+  10% {
+    top: 14px;
+    left: 14px;
+  }
+  50% {
+    left: 7.5px;
+    top: 7.5px;
+  }
+  60% {
+    left: 9.5px;
+    top: 5.5px;
+  }
+  70% {
+    left: 14.5px;
+    top: 2.5px;
+  }
+  80% {
+    left: 19px;
+    top: 2.5px;
+  }
+  90% {
+    left: 21px;
+    top: 2.5px;
+  }
+  100% {
+    left: 21px;
+    top: 5px;
+  }
+}
+@keyframes burger-dot-two {
+  10% {
+    bottom: 14px;
+    right: 14px;
+  }
+  50% {
+    right: 7.5px;
+    bottom: 7.5px;
+  }
+  60% {
+    right: 9.5px;
+    bottom: 5.5px;
+  }
+  70% {
+    right: 14.5px;
+    bottom: 2.5px;
+  }
+  80% {
+    right: 19px;
+    bottom: 2.5px;
+  }
+  90% {
+    right: 20px;
+    bottom: 2.5px;
+  }
+  100% {
+    right: 20px;
+    bottom: 5px;
+  }
+}
